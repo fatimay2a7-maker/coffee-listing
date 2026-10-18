@@ -1,81 +1,198 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+  <title>Our Collection | Coffee Shop</title>
 
-    <title>Simple Coffee Listing | devChallenges.io</title>
-  </head>
-  <body>
-    <main>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- تصویر پس‌زمینه بالای صفحه -->
+  <header class="hero"></header>
+
+  <!-- بخش اصلی محصولات -->
+  <main class="collection">
+
+    <section class="collection-header">
+      
+      <img class="flash" src="./resources/vector.svg" alt="">
       <h1>Our Collection</h1>
+
       <p>
-        Introducing our Coffee Collection, a selection of unique coffees from
-        different roast types and origins, expertly roasted in small batches and
-        shipped fresh weekly.
+        Introducing our Coffee Collection, a selection of unique
+        coffees from different roast types and origins, expertly
+        roasted in small batches and shipped fresh weekly.
       </p>
-      <button>All Products</button>
-      <button>Available Now</button>
-      <div class="cards-container">
-        <div class="card first-card">
-          <img src="" alt="" />
-          <button class="popular"></button>
-          <h2></h2>
-          <button></button>
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="card second-card">
-          <img src="" alt="" />
-          <button class="popular"></button>
-          <h2></h2>
-          <button></button>
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-          <h2></h2>
-          <button></button>
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-          <h2></h2>
-          <button></button>
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-          <h2></h2>
-          <button></button>
-          <img src="" alt="" />
-          <p></p>
-          <p></p>
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-          <h2></h2>
-          <button></button>
-          <img src="" alt="" />
-          <p></p>
-        </div>
+
+      <!-- فیلتر محصولات -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">
+          All Products
+        </button>
+
+        <button class="filter-btn" data-filter="available">
+          Available Now
+        </button>
       </div>
-    </main>
-    <div class="author-info">
-      Coded by <a href="#">fatima hamidi</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
+    </section>
+
+    <!-- کارت‌های محصولات -->
+    <section class="products" id="products">
+
+      <article class="product-card" data-available="true">
+        <div class="product-image">
+          <img
+            src='./resources/cappuccino.jpg'
+            alt="Cappuccino with latte art"
+          >
+          <span class="badge">Popular</span>
+        </div>
+
+        <div class="product-details">
+          <div class="product-name">
+            <h2>Cappuccino</h2>
+            <span class="price">$5.20</span>
+          </div>
+
+          <p class="rating">
+            <span class="star">★</span>
+            <strong>4.7</strong>
+            <span class="votes">(65 votes)</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="product-card" data-available="true">
+        <div class="product-image">
+          <img
+            src="./resources/house-coffee.jpg"
+            alt="Freshly prepared house coffee"
+          >
+          <span class="badge">Popular</span>
+        </div>
+
+        <div class="product-details">
+          <div class="product-name">
+            <h2>House Coffee</h2>
+            <span class="price">$3.50</span>
+          </div>
+
+          <p class="rating">
+            <span class="star">★</span>
+            <strong>4.85</strong>
+            <span class="votes">(14 votes)</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="product-card" data-available="true">
+        <div class="product-image">
+          <img
+            src="./resources/espresso.jpg"
+            alt="Espresso in a white cup"
+          >
+        </div>
+
+        <div class="product-details">
+          <div class="product-name">
+            <h2>Espresso</h2>
+            <span class="price">$2.50</span>
+          </div>
+
+          <p class="rating">
+            <span class="star">★</span>
+            <strong>4.9</strong>
+            <span class="votes">(55 votes)</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="product-card" data-available="true">
+        <div class="product-image">
+          <img
+            src="./resources/coffee-latte.jpg"
+            alt="Coffee latte in a ceramic cup"
+          >
+        </div>
+
+        <div class="product-details">
+          <div class="product-name">
+            <h2>Coffee Latte</h2>
+            <span class="price">$4.50</span>
+          </div>
+
+          <p class="rating">
+            <span class="star">★</span>
+            <strong>5.0</strong>
+            <span class="votes">(23 votes)</span>
+          </p>
+        </div>
+      </article>
+
+<!-- Chocolate Coffee -->
+<article class="product-card" data-available="false">
+  <div class="product-image">
+    <img
+      src="./resources/chocolate-coffee.jpg"
+      alt="Chocolate coffee in a cup"
+    >
+  </div>
+
+  <div class="product-details">
+    <div class="product-name">
+      <h2>Chocolate Coffee</h2>
+      <span class="price">$4.00</span>
     </div>
-  </body>
+
+    <div class="product-meta">
+      <p class="rating">
+        <span class="star">★</span>
+        <strong>4.65</strong>
+        <span class="votes">(122 votes)</span>
+      </p>
+
+      <span class="sold-out">Sold out</span>
+    </div>
+  </div>
+</article>
+
+      <article class="product-card" data-available="true">
+        <div class="product-image">
+          <img
+            src="./resources/valentine-special.jpg"
+            alt="Special pink coffee drink"
+          >
+        </div>
+
+        <div class="product-details">
+          <div class="product-name">
+            <h2>Valentine Special</h2>
+            <span class="price">$5.50</span>
+          </div>
+
+          <p class="rating no-rating">
+            <span class="empty-star">☆</span>
+            <span>No ratings</span>
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- پاورقی -->
+  <footer class="footer">
+    Coded by <a href="#">fatima hamidi</a> |
+    Inspired by <a href="https://devchallenges.io/">devChallenges.io</a>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
 </html>
